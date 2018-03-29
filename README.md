@@ -9,7 +9,14 @@ This project is a starter app for using Angular 2.0 with Webpack and the package
 3. Install Yarn `npm install -g yarn`
 4. Install angular-cli `npm install -g angular-cli`
 5. run `yarn`
-6. run `yarn start` to start the dev server
+6. replace all instances on OpaqueToken in node_modules with InjectionToken (if it requires a type use <object>)
+7. run `yarn add @angular/{animations,common,compiler,compiler-cli,core,forms,http,platform-browser,platform-browser-dynamic,platform-server,router}@'^5.2.0' typescript@2.4.2 rxjs@'^5.5.2'`
+8. run `yarn start` to start the dev server
+9. in webpack.common.js, replace line 100-106 with:
+ `    new webpack.ContextReplacementPlugin(
+        /angular(\\|\/)core(\\|\/)/,
+        helpers.root("src") // location of your src
+ )`
 
 #### To build:
 

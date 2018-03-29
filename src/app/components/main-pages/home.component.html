@@ -7,6 +7,7 @@
           type="text"
           class="form-control" 
           formControlName="name"
+          autocomplete='name'
           placeholder="Your full name">
         <div class="form-control-feedback" *ngIf="hasError('name', 'required')">
           Name is required
@@ -24,6 +25,7 @@
             type="email"
             class="form-control" 
             formControlName="email"
+            autocomplete='email'
             placeholder="Your email address">
         </label>
         <div class="form-control-feedback" *ngIf="hasError('email', 'required')">
@@ -37,6 +39,7 @@
             type="email"
             class="form-control" 
             formControlName="confirm"
+            autocomplete='email'
             placeholder="Confirm your email address">
         </label>
         <div class="form-control-feedback" *ngIf="hasError('confirm', 'required')">
